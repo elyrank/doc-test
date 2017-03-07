@@ -46,7 +46,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Error'
+              $ref: '#/definitions/baseURI'
         default:
           description: Unexpected error
           schema:
@@ -182,6 +182,21 @@ paths:
           schema:
             $ref: '#/definitions/Error'
 definitions:
+  baseURI:
+    type: object
+    properties:
+      account:
+        type: string
+        description: Account Id.
+      service:
+        type: string
+        description: the service name.
+      display_name:
+        type: string
+        description: Display name of product.
+      baseURI:
+        type: string
+        description: the domain.
   Product:
     type: object
     properties:
